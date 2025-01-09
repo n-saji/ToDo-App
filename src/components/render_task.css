@@ -162,20 +162,27 @@ input[type="checkbox"]:checked::after{
     }
     
     .date-input{
-        width: 22px;
-        height: 20px;
+        width: 100px;
+        height: 35px;
+        padding: 0% 3%;
     }
 
     .task-input{
         font-size: 1.5rem;
-        height: 20px;
+        height: 35px;
+        padding: 0% 5%;
     }
 
     .add-button{
         height: 35px;
         width: 35px;
+        text-align: center;
+        align-items: center;
     }
 
+    .task-table{
+        width: 95vw;
+    }
     .task-table thead{
         font-size: 0.9rem;
     }
@@ -194,6 +201,12 @@ input[type="checkbox"]:checked::after{
     }
 
     .task-table button{
+        font-size: 0.8rem;
+    }
+
+    .save{
+        width: 80px;
+        height: 35px;
         font-size: 0.8rem;
     }
 
