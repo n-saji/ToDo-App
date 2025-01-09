@@ -89,8 +89,8 @@ function RenderTask() {
           <tr>
             <th>Task</th>
             <th>Deadline</th>
-            <th>Update</th>
             <th>Completed</th>
+            <th>Update</th>
             <th>Delete</th>
           </tr>
         </thead>
