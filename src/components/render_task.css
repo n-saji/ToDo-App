@@ -1,8 +1,8 @@
 .mode-form {
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin: 0.5rem;
+  /* position:absolute; */
+  justify-content: end;
+  display: flex;
+  margin: 0.5rem 0.5rem 2rem;
 }
 
 .mode-form label {
