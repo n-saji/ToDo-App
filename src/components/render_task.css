@@ -1,213 +1,230 @@
-.App h1{
-    font-size: 5rem;
-    color: #333;
-    text-align: center;
-    margin-top: 2rem;
-
-}
-.add-task{
-    display: flex;
-    justify-content: center;
-    margin: 4rem 0;
-    gap: 1rem;
-}
-.task-input{
-    min-width: 200px;
-    width: 50vw;
-    height: 4vh;
-    font-size: 1.3rem;
-    border: 1px solid #333;
-    border-radius: 5px;
-    padding: 0.4rem;
-    outline: none;
-    transition: all 0.3s ease-in-out;
+.mode-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
 }
 
-.date-input{
-    /* min-width: 100px; */
-    width: 8vw;
-    height: 4vh;
-    padding: 0.2rem;
-    font-size: 1rem;
-    border: 1px solid #333;
-    border-radius: 5px;
-    padding: 0.4rem;
-    outline: none;
-    transition: all 0.3s ease-in-out;
+.mode-form label {
+  color: #333;
+  padding: 0.5rem;
+  font-weight: 500;
 }
 
-.task-input:focus , .date-input:focus{
-    outline: none;
-    border: 1px solid hsl(0, 77%, 21%);
+.mode-form select {
+  border-radius: 5px;
+  padding: 0.4rem;
+  outline: none;
 }
 
-.add-button{
-    border: none;
-    background-color: hsl(0, 75%, 2%);
-    color: white;
-    width: 50px;
-    border-radius: 5px;
-    border-style: solid;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-size: large;
+.App h1 {
+  font-size: 5rem;
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+}
+.add-task {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  gap: 1rem;
+}
+.task-input {
+  min-width: 200px;
+  width: 50vw;
+  height: 4vh;
+  font-size: 1.3rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0.4rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.add-button:hover{
-    background-color: hsl(0, 77%, 21%);
-    font-size:x-large;
+.date-input {
+  /* min-width: 100px; */
+  width: 8vw;
+  height: 4vh;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0.4rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.task-table{
-    width: 80vw;
-    text-align: center;
-    margin: 0 auto;
-    /* border-collapse: collapse; */
-    /* border: #333 1px solid; */
-    border-color: black;
+.task-input:focus,
+.date-input:focus {
+  outline: none;
+  border: 1px solid hsl(0, 77%, 21%);
 }
 
-.task-table thead{
-    background-color: hsl(0, 75%, 2%);
-    color: white;
-    height: 3rem;
-    font-size: 1.2rem;
-    /* font-weight:300; */
+.add-button {
+  border: none;
+  background-color: hsl(0, 75%, 2%);
+  color: white;
+  width: 50px;
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: large;
 }
 
-.task-table th:nth-child(1){
-    width: 50%;
+.add-button:hover {
+  background-color: hsl(0, 77%, 21%);
+  font-size: x-large;
 }
 
-.task-table th:nth-child(2){
-    width: 20%;
+.task-table {
+  width: 80vw;
+  text-align: center;
+  margin: 0 auto;
+  /* border-collapse: collapse; */
+  /* border: #333 1px solid; */
+  border-color: black;
+}
+
+.task-table thead {
+  background-color: hsl(0, 75%, 2%);
+  color: white;
+  height: 3rem;
+  font-size: 1.2rem;
+  /* font-weight:300; */
+}
+
+.task-table th:nth-child(1) {
+  width: 50%;
+}
+
+.task-table th:nth-child(2) {
+  width: 20%;
 }
 
 .task-table th:nth-child(3),
 .task-table th:nth-child(4),
 .task-table th:nth-child(5) {
-    width: 10%;
+  width: 10%;
 }
 
-.task-table tbody{
-    /* background-color: hsl(0, 75%, 2%); */
-    /* color: white; */
-    height: 3rem;
-    font-size: 1.1rem;
-    /* font-weight:300; */
+.task-table tbody {
+  /* background-color: hsl(0, 75%, 2%); */
+  /* color: white; */
+  height: 3rem;
+  font-size: 1.1rem;
+  /* font-weight:300; */
 }
 
-input[type="checkbox"]{
-    width: 20px;
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  /* appearance: none; */
+  border: 1px solid #333;
+  accent-color: green;
+}
+
+input[type="checkbox"]:checked::after {
+  /* content: "✔"; */
+  /* content: '\2713'; */
+  font-size: 1.5rem;
+  accent-color: green;
+}
+
+.task-table button {
+  border: none;
+  background-color: hsl(240, 3%, 7%);
+  color: white;
+  width: 5rem;
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+.task-table button:hover {
+  background-color: hsl(0, 1%, 31%);
+}
+
+.save {
+  border: none;
+  background-color: hsl(0, 75%, 2%);
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: large;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.save:hover {
+  background-color: hsl(0, 77%, 21%);
+}
+
+@media screen and (max-width: 1000px) {
+  .add-task {
     height: 20px;
-    /* appearance: none; */
-    border: 1px solid #333;
-    accent-color: green;
-}
+  }
 
-input[type="checkbox"]:checked::after{
-    /* content: "✔"; */
-    /* content: '\2713'; */
-    font-size: 1.5rem;
-    accent-color: green;
-}
+  .App h1 {
+    font-size: 3rem;
+  }
 
-.task-table button{
-    border: none;
-    background-color: hsl(240, 3%, 7%);
-    color: white;
-    width: 5rem;
-    border-radius: 5px;
-    border-style: solid;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-size: 1rem;
-    padding: 0.3rem;
-}
-
-.task-table button:hover{
-    background-color: hsl(0, 1%, 31%);
-}
-
-.save{
-    border: none;
-    background-color: hsl(0, 75%, 2%);
-    color: white;
+  .date-input {
     width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    border-style: solid;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    font-size: large;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    height: 35px;
+    padding: 0% 3%;
+  }
+
+  .task-input {
+    font-size: 1.5rem;
+    height: 35px;
+    padding: 0% 5%;
+  }
+
+  .add-button {
+    height: 35px;
+    width: 35px;
     text-align: center;
-    margin: 50px auto;
-}
+    align-items: center;
+  }
 
-.save:hover{
-    background-color: hsl(0, 77%, 21%);
-}
+  .task-table {
+    width: 95vw;
+  }
+  .task-table thead {
+    font-size: 0.9rem;
+  }
 
-@media screen and (max-width: 1000px){
+  .task-table tbody {
+    font-size: 0.8rem;
+  }
 
-    .add-task{
-        height: 20px;
-    }
+  td {
+    padding: 0.4rem;
+  }
 
-    .App h1{
-        font-size: 3rem;
-    }
-    
-    .date-input{
-        width: 100px;
-        height: 35px;
-        padding: 0% 3%;
-    }
+  input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+  }
 
-    .task-input{
-        font-size: 1.5rem;
-        height: 35px;
-        padding: 0% 5%;
-    }
+  .task-table button {
+    font-size: 0.8rem;
+  }
 
-    .add-button{
-        height: 35px;
-        width: 35px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .task-table{
-        width: 95vw;
-    }
-    .task-table thead{
-        font-size: 0.9rem;
-    }
-
-    .task-table tbody{
-        font-size: 0.8rem;
-    }
-
-    td{
-        padding: 0.4rem;
-    }
-
-    input[type="checkbox"]{
-        width: 15px;
-        height: 15px;
-    }
-
-    .task-table button{
-        font-size: 0.8rem;
-    }
-
-    .save{
-        width: 80px;
-        height: 35px;
-        font-size: 0.8rem;
-    }
-
+  .save {
+    width: 80px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
 }
