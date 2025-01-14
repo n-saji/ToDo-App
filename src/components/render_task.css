@@ -1,19 +1,24 @@
-.mode-form {
-  /* position:absolute; */
-  justify-content: end;
+.top-header {
   display: flex;
-  margin: 0.5rem 0.5rem 2rem;
+  align-items: center;
+  height: 30px;
+}
+
+.mode-form {
+  position:absolute;
+  right: 0;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.2rem;
 }
 
 .mode-form label {
   color: #333;
-  padding: 0.5rem;
   font-weight: 500;
 }
 
 .mode-form select {
   border-radius: 5px;
-  padding: 0.4rem;
   outline: none;
 }
 
@@ -21,7 +26,7 @@
   font-size: 5rem;
   color: #333;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 .add-task {
   display: flex;

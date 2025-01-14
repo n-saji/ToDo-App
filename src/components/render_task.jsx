@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./render_task.css";
+import DigitalClock from "./digitalCLock";
 
 function RenderTask() {
   const [task, setTask] = useState("");
@@ -77,31 +78,34 @@ function RenderTask() {
 
   return (
     <>
-      <form className="mode-form">
-        <label
-          style={{
-            color: darkMode ? "white" : "black",
-            transition: "all 1s ease",
-          }}
-        >
-          Mode{" "}
-        </label>
-        <select
-          onChange={(e) => {
-            console.log(e.target.value);
-            setDarkMode(e.target.value === "dark");
-            toggleDarkMode(e.target.value === "dark");
-          }}
-          value={darkMode ? "dark" : "light"}
-          style={{
-            backgroundColor: darkMode ? "black" : "white",
-            color: darkMode ? "white" : "black",
-          }}
-        >
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </form>
+      <div className="top-header">
+        <DigitalClock darkMode={darkMode} />
+        <div className="mode-form">
+          <label
+            style={{
+              color: darkMode ? "white" : "black",
+              transition: "all 1s ease",
+            }}
+          >
+            Mode{" "}
+          </label>
+          <select
+            onChange={(e) => {
+              setDarkMode(e.target.value === "dark");
+              toggleDarkMode(e.target.value === "dark");
+            }}
+            value={darkMode ? "dark" : "light"}
+            style={{
+              backgroundColor: darkMode ? "black" : "white",
+              color: darkMode ? "white" : "black",
+            }}
+          >
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+      </div>
+
       <div className="App">
         <h1
           style={{
